@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 # PostgreSQL database URL
 DATABASE_URL = "postgresql://postgres:12345678@localhost:5432/job-tracker"
 
-#The Engine is a factory that can create new database connections for us, which also holds onto connections inside of a Connection Pool for fast reuse. 
+#The Engine is a   FACTORY that can create new database connections for us, which also holds onto connections inside of a Connection Pool for fast reuse. 
 engine= create_engine(DATABASE_URL) 
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
